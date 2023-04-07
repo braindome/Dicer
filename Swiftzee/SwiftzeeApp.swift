@@ -11,7 +11,7 @@ import SwiftUI
 struct SwiftzeeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(selectedSize: 6, humanOpponent: true)
         }
     }
 }

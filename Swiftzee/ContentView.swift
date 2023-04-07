@@ -10,44 +10,23 @@ import SwiftUI
 struct ContentView: View {
     @ObservedObject var controller = GameController()
     @State var viewController: UIViewController?
-    @State var game = Game()
+    //@State var game = Game()
     @State var playerDiceNumber = 2
     @State var AIDiceNumber = 2
     @State var betNumber = 0
     @State var betMonies = 0
     @State var bank = 0
+    @State var selectedSize : Int
+    let humanOpponent : Bool
+    
 
     var body: some View {
         ZStack {
             Color(red: 38/256, green: 108/256, blue: 59/256)
                 .ignoresSafeArea()
             VStack {
+                Text("Selected size: \(selectedSize), human opponent?")
                 HStack {
-                    /*Text("Bet on result: ")
-                    Picker(selection: $betNumber, label: Text("Picker")) {
-                        Text("1").tag(1)
-                        Text("2").tag(2)
-                        Text("3").tag(3)
-                        Text("4").tag(4)
-                        Text("5").tag(5)
-                        Text("6").tag(6)
-
-                    }
-                    .onChange(of: betNumber) { newValue in
-                        print("Betting on \(betNumber)")
-                    }
-                    .pickerStyle(.wheel)
-                    TextField("Insert coin", value: $betMonies, formatter: NumberFormatter())
-                        .onChange(of: betMonies) { newValue in
-                        print("Betting this many monies: \(String(describing: betMonies))")
-                        
-                    }
-                    .padding()
-                    Text("$ \(bank)")
-
-                        .padding()
-                        .foregroundColor(.black)
-                    Text(" monies")*/
                     Spacer(minLength: 20.00)
                     Text("Bank: \(controller.game.bank)")
                     Spacer(minLength: 20.00)
@@ -91,6 +70,8 @@ struct ContentView: View {
             .onAppear {
                 viewController = UIApplication.shared.windows.first?.rootViewController
             }
+        }.onAppear {
+            controller.game.dieSize = selectedSize
         }
         
     }
@@ -98,7 +79,7 @@ struct ContentView: View {
     struct DiceView : View {
         let n : Int
         var body : some View {
-            Image(systemName: "die.face.\(n)")
+            Image(systemName: "\(n).square")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .padding()
@@ -138,6 +119,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(selectedSize: 6, humanOpponent: true)
     }
 }

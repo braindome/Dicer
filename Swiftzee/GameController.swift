@@ -11,10 +11,7 @@ class GameController : ObservableObject {
     @Published var game = Game()
     
     func rollDice() -> Int {
-        
-        //game.handleRollResult()
-        
-        return Int.random(in: 1...6)
+        return Int.random(in: 1...game.dieSize)
     }
     
     

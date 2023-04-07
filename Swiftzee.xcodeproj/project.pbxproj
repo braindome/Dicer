@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A9404D8229DF57DF00130A7C /* IntroPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9404D8129DF57DF00130A7C /* IntroPage.swift */; };
 		A99FA75629DB127C006CE9DC /* SwiftzeeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99FA75529DB127C006CE9DC /* SwiftzeeApp.swift */; };
 		A99FA75829DB127C006CE9DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99FA75729DB127C006CE9DC /* ContentView.swift */; };
 		A99FA75A29DB127C006CE9DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A99FA75929DB127C006CE9DC /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A9404D8129DF57DF00130A7C /* IntroPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroPage.swift; sourceTree = "<group>"; };
 		A99FA75229DB127C006CE9DC /* Swiftzee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swiftzee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A99FA75529DB127C006CE9DC /* SwiftzeeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftzeeApp.swift; sourceTree = "<group>"; };
 		A99FA75729DB127C006CE9DC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				A99FA75B29DB127C006CE9DC /* Preview Content */,
 				A9E4B6ED29DCE1C80032734A /* Game.swift */,
 				A9E4B75C29DD6BE30032734A /* GameController.swift */,
+				A9404D8129DF57DF00130A7C /* IntroPage.swift */,
 			);
 			path = Swiftzee;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			files = (
 				A99FA75829DB127C006CE9DC /* ContentView.swift in Sources */,
 				A9E4B75D29DD6BE30032734A /* GameController.swift in Sources */,
+				A9404D8229DF57DF00130A7C /* IntroPage.swift in Sources */,
 				A9E4B6EE29DCE1C80032734A /* Game.swift in Sources */,
 				A99FA75629DB127C006CE9DC /* SwiftzeeApp.swift in Sources */,
 			);
